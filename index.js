@@ -14,15 +14,9 @@ class SocketCli {
         ws = new WebSocket(serverURL);
 
         ws.on('open', () => {
-
             reconnectInterval = 1000;
             reconnectTimeoutId = null;
 
-            let body = {
-                method: 'increment',
-                count: 10,
-            };
-            ws.send(JSON.stringify(body));
         });
 
         ws.on('close', () => {
