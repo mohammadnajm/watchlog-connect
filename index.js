@@ -52,8 +52,8 @@ class SocketCli {
             }
         }
     }
-    distribution(metric = null, count = 1) {
-        if (typeof metric === 'string' && typeof count === 'number' && count > 0) {
+    distribution(metric = null, count) {
+        if (typeof metric === 'string' && typeof count === 'number') {
             if (ws && ws.readyState === WebSocket.OPEN) {
                 ws.send(JSON.stringify({ method: 'distribution', metric, count }));
             } else {
@@ -61,8 +61,8 @@ class SocketCli {
             }
         }
     }
-    gauge(metric = null, count = 1) {
-        if (typeof metric === 'string' && typeof count === 'number' && count > 0) {
+    gauge(metric = null, count) {
+        if (typeof metric === 'string' && typeof count === 'number') {
             if (ws && ws.readyState === WebSocket.OPEN) {
                 ws.send(JSON.stringify({ method: 'gauge', metric, count }));
             } else {
@@ -70,8 +70,8 @@ class SocketCli {
             }
         }
     }
-    percentage(metric = null, count = 1) {
-        if (typeof metric === 'string' && typeof count === 'number' && count > 0) {
+    percentage(metric = null, count) {
+        if (typeof metric === 'string' && typeof count === 'number' && count > 0 && count <= 100) {
             if (ws && ws.readyState === WebSocket.OPEN) {
                 ws.send(JSON.stringify({ method: 'percentage', metric, count }));
             } else {
@@ -79,7 +79,7 @@ class SocketCli {
             }
         }
     }
-    systembyte(metric = null, count = 1) {
+    systembyte(metric = null, count) {
         if (typeof metric === 'string' && typeof count === 'number' && count > 0) {
             if (ws && ws.readyState === WebSocket.OPEN) {
                 ws.send(JSON.stringify({ method: 'systembyte', metric, count }));
