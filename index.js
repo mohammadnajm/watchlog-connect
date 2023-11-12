@@ -82,6 +82,42 @@ class SocketCli {
             }
         }
     }
+    successLog(service = null, message) {
+        if (typeof service === 'string' && typeof message === 'string') {
+            if (ws && ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify({ method: 'log', service, message, status:1 }));
+            } else {
+                console.log("Data cannot be sent to the watchlog agent")
+            }
+        }
+    }
+    errorLog(service = null, message) {
+        if (typeof service === 'string' && typeof message === 'string') {
+            if (ws && ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify({ method: 'log', service, message, status:-1 }));
+            } else {
+                console.log("Data cannot be sent to the watchlog agent")
+            }
+        }
+    }
+    warningLog(service = null, message) {
+        if (typeof service === 'string' && typeof message === 'string') {
+            if (ws && ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify({ method: 'log', service, message, status:2 }));
+            } else {
+                console.log("Data cannot be sent to the watchlog agent")
+            }
+        }
+    }
+    log(service = null, message) {
+        if (typeof service === 'string' && typeof message === 'string') {
+            if (ws && ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify({ method: 'log', service, message, status:0 }));
+            } else {
+                console.log("Data cannot be sent to the watchlog agent")
+            }
+        }
+    }
     reconnect() {
         if (!reconnectTimeoutId && ws.readyState !== WebSocket.OPEN) {
             console.log(`Reconnecting in ${reconnectInterval / 1000} seconds...`);
