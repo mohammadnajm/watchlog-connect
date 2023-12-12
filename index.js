@@ -33,7 +33,7 @@ class SocketCli {
             if (ws && ws.readyState === WebSocket.OPEN) {
                 ws.send(JSON.stringify({ method: 'increment', metric, count }));
             } else {
-                console.log("Data cannot be sent to the watchlog agent")
+                // console.log("Data cannot be sent to the watchlog agent")
             }
         }
     }
@@ -42,7 +42,7 @@ class SocketCli {
             if (ws && ws.readyState === WebSocket.OPEN) {
                 ws.send(JSON.stringify({ method: 'decrement', metric, count }));
             } else {
-                console.log("Data cannot be sent to the watchlog agent")
+                // console.log("Data cannot be sent to the watchlog agent")
             }
         }
     }
@@ -51,7 +51,7 @@ class SocketCli {
             if (ws && ws.readyState === WebSocket.OPEN) {
                 ws.send(JSON.stringify({ method: 'distribution', metric, count }));
             } else {
-                console.log("Data cannot be sent to the watchlog agent")
+                // console.log("Data cannot be sent to the watchlog agent")
             }
         }
     }
@@ -60,7 +60,7 @@ class SocketCli {
             if (ws && ws.readyState === WebSocket.OPEN) {
                 ws.send(JSON.stringify({ method: 'gauge', metric, count }));
             } else {
-                console.log("Data cannot be sent to the watchlog agent")
+                // console.log("Data cannot be sent to the watchlog agent")
             }
         }
     }
@@ -69,7 +69,7 @@ class SocketCli {
             if (ws && ws.readyState === WebSocket.OPEN) {
                 ws.send(JSON.stringify({ method: 'percentage', metric, count }));
             } else {
-                console.log("Data cannot be sent to the watchlog agent")
+                // console.log("Data cannot be sent to the watchlog agent")
             }
         }
     }
@@ -78,7 +78,7 @@ class SocketCli {
             if (ws && ws.readyState === WebSocket.OPEN) {
                 ws.send(JSON.stringify({ method: 'systembyte', metric, count }));
             } else {
-                console.log("Data cannot be sent to the watchlog agent")
+                // console.log("Data cannot be sent to the watchlog agent")
             }
         }
     }
@@ -87,7 +87,7 @@ class SocketCli {
             if (ws && ws.readyState === WebSocket.OPEN) {
                 ws.send(JSON.stringify({ method: 'log', service, message, status:1 }));
             } else {
-                console.log("Data cannot be sent to the watchlog agent")
+                // console.log("Data cannot be sent to the watchlog agent")
             }
         }
     }
@@ -96,7 +96,7 @@ class SocketCli {
             if (ws && ws.readyState === WebSocket.OPEN) {
                 ws.send(JSON.stringify({ method: 'log', service, message, status:-1 }));
             } else {
-                console.log("Data cannot be sent to the watchlog agent")
+                // console.log("Data cannot be sent to the watchlog agent")
             }
         }
     }
@@ -105,7 +105,7 @@ class SocketCli {
             if (ws && ws.readyState === WebSocket.OPEN) {
                 ws.send(JSON.stringify({ method: 'log', service, message, status:2 }));
             } else {
-                console.log("Data cannot be sent to the watchlog agent")
+                // console.log("Data cannot be sent to the watchlog agent")
             }
         }
     }
@@ -114,7 +114,7 @@ class SocketCli {
             if (ws && ws.readyState === WebSocket.OPEN) {
                 ws.send(JSON.stringify({ method: 'log', service, message, status:0 }));
             } else {
-                console.log("Data cannot be sent to the watchlog agent")
+                // console.log("Data cannot be sent to the watchlog agent")
             }
         }
     }
