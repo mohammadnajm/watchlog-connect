@@ -30,5 +30,12 @@ watchlog.gauge("Your_metric" , 12.23)
 // Send Metric: To send byte of a metric (value is required)
 watchlog.systembyte("Your_metric" , 1024000000) //for example : 1024000000 is 1 GB
 
+// Log manager
+watchlog.log("app or service", "info message")
+watchlog.successLog("app or service", "success message")
+watchlog.errorLog("app or service", "error message")
+watchlog.warningLog("app or service", "warning message")
+
+
 ```
 
