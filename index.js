@@ -1,6 +1,6 @@
 const WebSocket = require('ws');
 
-const serverURL = 'ws://127.0.0.1:3774/'; // Replace with your server URL
+const serverURL = 'ws://127.0.0.1:3775/'; // Replace with your server URL
 let ws = null; // WebSocket instance
 let reconnectInterval = 1000; // Initial reconnect interval
 let reconnectTimeoutId = null; // Reconnect timeout ID
