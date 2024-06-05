@@ -1,6 +1,6 @@
 {
   "name": "watchlog-connect",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "This is a package to communicate with watchlog agent",
   "main": "index.js",
   "scripts": {
