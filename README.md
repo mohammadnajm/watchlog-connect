@@ -1,6 +1,6 @@
 # watchlog
 
-A Node.js client for [watchlog](https://watchlog.us/) server .
+A Node.js client for [watchlog](https://watchlog.io/) server .
 
 
 
