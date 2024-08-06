@@ -1,12 +1,22 @@
 {
   "name": "watchlog-connect",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "This is a package to communicate with watchlog agent",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "mohammadnajm",
+  "keywords": [
+    "chart",
+    "log",
+    "metric",
+    "watchlog",
+    "watchlog.io",
+    "alert",
+    "client",
+    "agent"
+  ],
   "license": "ISC",
   "dependencies": {
     "ws": "^8.13.0"
