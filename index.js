@@ -1,4 +1,3 @@
-const fetch = require('node-fetch');
 const axios = require('axios');
 
 const serverURL = 'http://127.0.0.1:3774/'; // Replace with your server URL
